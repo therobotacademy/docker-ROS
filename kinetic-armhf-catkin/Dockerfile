@@ -30,6 +30,6 @@ RUN /bin/bash -c "source /opt/ros/kinetic/setup.bash && \
                   catkin_init_workspace && \
                   cd ~/catkin_ws/ && \
                   catkin_make && \
-                  echo 'source ~/catkin_ws/devel/setup.bash' >> /.bashrc"
+                  echo 'source ~/catkin_ws/devel/setup.bash' >> ~/.bashrc"
 
 RUN bin/bash -c "source ~/.bashrc"
