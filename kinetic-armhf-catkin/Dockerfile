@@ -13,7 +13,7 @@ MAINTAINER Bernardo Ronquillo
 # ...
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN sudo apt-get update ;  sudo apt-get install -y nano
+RUN apt-get update ;  apt-get install -y nano
 
 # add environment setup 
 RUN /bin/bash -c "echo 'source /opt/ros/kinetic/setup.bash' >> ~/.bashrc"
