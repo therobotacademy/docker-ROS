@@ -13,7 +13,12 @@ MAINTAINER Bernardo Ronquillo
 # ...
 ENV DEBIAN_FRONTEND noninteractive
 
+# Set editor when editing files with ROS
 RUN apt-get update ;  apt-get install -y nano
+RUN /bin/bash -c "echo 'export EDITOR=nano' >> ~/.bashrc"
+
+# Serial module required to access serial or USB devices
+RUN apt-get install python-serial
 
 # add environment setup 
 RUN /bin/bash -c "echo 'source /opt/ros/kinetic/setup.bash' >> ~/.bashrc"
@@ -25,6 +30,6 @@ RUN /bin/bash -c "source /opt/ros/kinetic/setup.bash && \
                   catkin_init_workspace && \
                   cd ~/catkin_ws/ && \
                   catkin_make && \
-                  echo 'source /catkin_ws/devel/setup.bash' >> /.bashrc"
+                  echo 'source ~/catkin_ws/devel/setup.bash' >> /.bashrc"
 
 RUN bin/bash -c "source ~/.bashrc"
