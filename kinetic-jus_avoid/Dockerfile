@@ -23,3 +23,7 @@ RUN /bin/bash -c "source /opt/ros/kinetic/setup.bash && \
 
 RUN bin/bash -c  "source ~/.bashrc"
                   
+VOLUME /dev:/dev
+
+# CMD ["roslaunch","jus_avoid","avoid_obstacles.launch"]
+
