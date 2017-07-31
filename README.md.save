@@ -1,4 +1,3 @@
-
 # docker-ROS
 Docker images for using  ROS in Robots based in Raspberry Pi SBC
 
@@ -25,6 +24,7 @@ $ docker build -t local/ros-catkin:kinetic-jus_avoid .
       - RUN A BASH SESSION:
 ```
 $ docker run --name ros-jus_avoid -d local/ros-catkin:kinetic-jus_avoid
+
 
 
 Docker hub URL for pulling theses images is:
