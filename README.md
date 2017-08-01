@@ -15,7 +15,7 @@ $ docker build -t local/ros-catkin:kinetic-robot-armhf .
 $ docker run --name ros-kinetic -it local/ros-catkin:kinetic-robot-armhf
 ```
 
-   * **Dockerfile** in folder *kinetic-jus_avoid* -> Robot JUS, package 'jus_avoid'. Try by running in the shell the command 'roslaunch jus_avoid avoid_obstacles'
+   * **Dockerfile** in folder *kinetic-jus_avoid* -> Robot JUS, package 'jus_avoid'. Try by running in the shell the command 'roslaunch jus_avoid avoid_obstacles.launch'
 
 
       - BUILD THE IMAGE:
@@ -24,8 +24,9 @@ $ docker build -t local/ros-catkin:kinetic-jus_avoid .
 ```
       - RUN A BASH SESSION:
 ```
-$ docker run --name ros-jus_avoid -d local/ros-catkin:kinetic-jus_avoid
-
+$ docker run --name ros-jus_avoid -it --privileged local/ros-catkin:kinetic-jus_avoid
+```
+This container includes 'VOLUME /dev:/dev'. So you just need to use the flag '--privileged' for accessing serial devices when running it.
 
 Docker hub URL for pulling theses images is:
 
