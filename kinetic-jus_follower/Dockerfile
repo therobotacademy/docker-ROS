@@ -15,6 +15,7 @@ ENV NOTVISIBLE "in users profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
 
 EXPOSE 22
+
 # Make sure bash is the standard shell
 
 RUN rm /bin/sh && ln -s /bin/bash /bin/sh
