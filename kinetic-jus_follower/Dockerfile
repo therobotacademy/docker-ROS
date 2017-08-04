@@ -31,7 +31,7 @@ RUN /bin/bash -c "source /opt/ros/kinetic/setup.bash && \
 # Clone the source code for the Robot
 RUN /bin/bash -c "source /opt/ros/kinetic/setup.bash && \
                   source ~/catkin_ws/devel/setup.bash && \
-	          roscd jus_avoid && \
+	          roscd jus_follower && \
                   git clone https://github.com/therobotacademy/jus_follower && \
                   mv jus_follower src"
 
