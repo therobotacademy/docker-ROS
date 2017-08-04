@@ -24,10 +24,10 @@ $ docker build -t local/ros-catkin:kinetic-jus_avoid .
 ```
       - RUN A BASH SESSION:
 ```
-$ docker run --name ros-jus_avoid -it --privileged local/ros-catkin:kinetic-jus_avoid
+$ docker run --name ros-jus_avoid -it --privileged -p 5000:22 --network=bridge local/ros-catkin:kinetic-jus_avoid
 ```
 This container includes 'VOLUME /dev:/dev'. So you just need to use the flag '--privileged' for accessing serial devices when running it.
 
-Docker hub URL for pulling theses images is:
+Docker hub URL for pulling the images is:
 
 https://hub.docker.com/r/therobotacademy/ros-catkin/
