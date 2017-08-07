@@ -23,7 +23,7 @@ RUN /bin/bash -c "source /opt/ros/kinetic/setup.bash && \
 RUN /bin/bash -c "source /opt/ros/kinetic/setup.bash && \
                   source ~/catkin_ws/devel/setup.bash && \
 	          roscd jus_follower && \
-                  git clone https://github.com/andreearobot/jus_follower && \
+                  git clone https://github.com/therobotacademy/jus_follower && \
                   mv jus_follower src"
 
 VOLUME /dev:/dev
