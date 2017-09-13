@@ -28,4 +28,6 @@ RUN /bin/bash -c "source /opt/ros/kinetic/setup.bash && \
 
 VOLUME /dev:/dev
 
-CMD source ~/catkin_ws/devel/setup.bash; roslaunch jus_avoid avoid_obstacles.launch;
+#CMD source ~/catkin_ws/devel/setup.bash; roslaunch jus_avoid avoid_obstacles.launch;
+
+WORKDIR /root/catkin_ws/src/jus_avoid
