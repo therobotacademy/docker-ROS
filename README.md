@@ -1,7 +1,10 @@
 # December 2018
 Dockerfile placed in root directory to deploy ROS Kinetic in Balena OS
+```
+export ROS_MASTER_URI=http://$HOSTNAME:11311
+```
 
-
+!!!!!! Unable to contact my own server at [http://2741f7d:38871/] !!!!!!
 
 # August 2017
 ## docker-ROS
