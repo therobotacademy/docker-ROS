@@ -1,5 +1,10 @@
+# December 2018
+Dockerfile placed in root directory to deploy ROS Kinetic in Balena OS
 
-# docker-ROS
+
+
+# August 2017
+## docker-ROS
 Docker images for using  ROS in Robots based in Raspberry Pi SBC
 
 These images are built on top of esteve/ros:kinetic-robot-armhf
